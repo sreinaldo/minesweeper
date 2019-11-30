@@ -3,7 +3,7 @@
     <tr>
       <%  game_board_cells.each do |cell| %>
         <%  if cell.row == row %>
-          <th class="<%=cell_style(cell)%>">
+          <th id="<%= cell.id %>" class="click_cell <%=cell_style(cell)%>">
             <%  if cell.open? %>
               <%=cell.value %>
             <% end %>

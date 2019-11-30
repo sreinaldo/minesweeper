@@ -26,6 +26,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # gem 'rack-cors'
 gem 'active_model_serializers'
 gem 'sass-rails', '~> 5.0'
+gem 'jquery-rails'
+gem 'uglifier', '>= 1.3.0'
+gem 'turbolinks'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
