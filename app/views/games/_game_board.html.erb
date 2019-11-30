@@ -1,0 +1,15 @@
+<table class="tg">
+  <%  game_rows.each do |row| %>
+    <tr>
+      <%  game_board_cells.each do |cell| %>
+        <%  if cell.row == row %>
+          <th class="tg-llyw">
+            <%  if cell.open? %>
+              <%=cell.value %>
+            <% end %>
+          </th>
+        <% end %>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
