@@ -1,4 +1,4 @@
-class GamesController < ApplicationControllerGame
+class GamesController < ApplicationGameController
   def index
     @game_board = GameBoard.find(16)
     @game_rows = [*0..@game_board.rows - 1]
