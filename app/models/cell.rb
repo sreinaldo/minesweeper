@@ -37,5 +37,6 @@ class Cell < ApplicationRecord
       end
     end
   end
+
 end
 
