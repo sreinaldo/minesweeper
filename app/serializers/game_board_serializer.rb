@@ -1,5 +1,5 @@
 class GameBoardSerializer < ActiveModel::Serializer
-  attributes :id, :rows, :columns, :mines
+  attributes :id, :rows, :columns, :mines, :status
 
   has_many :cells
 end

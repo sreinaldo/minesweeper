@@ -7,7 +7,7 @@ class CreateGameBoards < ActiveRecord::Migration[6.0]
       t.datetime :start_at, default: DateTime.now()
       t.datetime :end_at
       t.integer :total_plays, default: 0
-      t.integer :status, null: 1
+      t.integer :status, default: 0
       t.references :user,  null: false, foreign_key: true
 
       t.timestamps
