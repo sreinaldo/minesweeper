@@ -1,17 +1,23 @@
 class Cell < ApplicationRecord
   belongs_to :game_board
 
-  enum status: { close: 0, open: 1, flag: 2}
+  enum status: { closed: 0, opened: 1, flagged: 2}
 
   scope :by_row_column, lambda {
     order(row: :asc, column: :asc)
   }
-  # after_create :update_cells
 
-  def self.open_cell(cell)
+  scope :opened, lambda {
+    where(status: :opened)
+  }
+
+  def self.open_cell(cell, flagged=false)
     puts(cell.status)
-    if cell.close?
-      cell.status = :open
+    if flagged && cell.closed?
+      cell.flagged!
+      return nil
+    elsif cell.closed?
+      cell.status = :opened
       cell.save
       if cell.value == 0
         x = [0, cell.row - 1].max

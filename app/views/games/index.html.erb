@@ -1,3 +1,44 @@
-<div align="center" >
-  <%= render :partial => 'games/game_board', locals: {game_rows: @game_rows, game_board_cells: @game_board_cells} %>
+<div align="center">
+  <form action="#" align="center">
+    <table align="center">
+      <tr>
+        <td>
+          Columns:
+        </td>
+        <td>
+          <input type="text" id="columns" name="columns" value="8">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Rows:
+        </td>
+        <td>
+          <input type="text" id="rows" name="rows" value="8">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Mines:
+        </td>
+        <td>
+          <input type="text" id="mines" name="mines" value="10">
+        </td>
+      </tr>
+    </table>
+    <input type="hidden" id="user_id" value="1">
+    <input type="hidden" id="game_status" value="1">
+    <br><br>
+    <input class="new_game" type="button" value="New Game">
+  </form>
+</div>
+<br>
+<br>
+<div align="center">
+  <div id="input_flag" class="flag hidden">
+    <input type="checkbox" id="flagged" name="flagged" value="true">Flag<br>
+  </div>
+  <br>
+  <table id="game_board" class="tg">
+  </table>
 </div>
