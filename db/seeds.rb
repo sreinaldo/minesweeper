@@ -7,5 +7,3 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create([{ name: 'Player 1' }])
-
-GameBoard.create({rows: 8, columns: 8, mines: 10, status: 1, user_id: 1})
